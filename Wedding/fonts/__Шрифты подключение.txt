@@ -1,0 +1,22 @@
+/*
+font-weight:
+100 - thin
+200 - UltraLite
+300 - light
+400 - normal / regular
+500 - medium
+600 - semibold
+700 - bold
+800 - Heavy
+900 - black
+*/
+
+@font-face {
+	font-family: "Proxima";
+	src:
+		url("../fonts/Roboto-Regular.woff2") format("woff2"),
+		url("../fonts/Roboto-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
