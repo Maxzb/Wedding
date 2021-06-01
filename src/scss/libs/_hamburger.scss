@@ -1,6 +1,6 @@
 .hamburger {
   padding: 15px 15px;
-  display: inline-block;
+  display: none;
   cursor: pointer;
   transition-property: opacity, filter;
   transition-duration: 0.15s;
@@ -17,7 +17,7 @@
   .hamburger.is-active .hamburger-inner,
   .hamburger.is-active .hamburger-inner::before,
   .hamburger.is-active .hamburger-inner::after {
-    background-color: #fff; }
+    background: linear-gradient(93.41deg, $gold 45.9%, $light-gold 97.16%); }
 
 .hamburger-box {
   width: 40px;
@@ -33,7 +33,7 @@
     width: 40px;
     height: 4px;
 /* ЦВЕТ ГАМБУРГЕРА */
-    background-color: #fff;
+    background: linear-gradient(93.41deg, $gold 45.9%, $light-gold 97.16%);
     border-radius: 4px;
     position: absolute;
     transition-property: transform;
@@ -71,3 +71,10 @@
      bottom: 0;
      transform: rotate(-90deg);
      transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+@media (max-width: 769px) {
+  .hamburger {
+    padding: 15px 15px;
+    display: inline-block;
+  }
+}

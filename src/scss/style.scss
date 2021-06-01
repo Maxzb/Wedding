@@ -2,12 +2,17 @@
 @import "libs/normalize";
 @import "null";
 @import "fonts";
+@import "common";
 @import "variables";
+@import "libs/hamburger";
 @import "main";
+@import "header";
+@import "offer";
+@import "timer";
+@import "place";
+@import "media";
 
 /*
-@import "libs/hamburger";
 @import "libs/slick";
 @import "libs/slick-slider";
-@import "header";
-@import "media"; */
+*/

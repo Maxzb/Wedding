@@ -52,5 +52,5 @@ $(function(){
 }
 .scroll {
    overflow: hidden;
- }
+}
 
