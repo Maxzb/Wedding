@@ -1,0 +1,36 @@
+.section-slider {
+	padding-top: 0;
+}
+
+.slider-wrapper {
+	overflow: hidden;
+}
+
+.slider-wrap {
+	overflow: hidden;
+	width: 100vw;
+}
+
+.slider {
+	width: 100%;
+}
+
+.slider__item {
+	margin-right: 0;
+	width: 250px;
+	height: 200px;
+}
+
+.slider__img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.fancybox-infobar {
+	display: none;
+}
+
+button.fancybox-button {
+	background-color: $gold;
+}

@@ -1,0 +1,51 @@
+.section-gallery {
+	padding-top: 0;
+}
+
+.gallery-wrap {
+	padding: 35px 0;
+	width: 100%;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, .25);
+	background-color: $light-rose;
+}
+
+.gallery__title {
+	display: block;
+	text-align: center;
+}
+
+.coming-soon {
+	margin-top: 30px;
+	font-size: 28px;
+	text-align: center;
+	opacity: .5;
+}
+
+.gallery__dot {
+	font-size: inherit;
+	color: inherit;
+}
+
+/* Анимация для точек */
+.coming-soon::after {
+	content: ".";
+	animation: dots 1.5s linear alternate infinite;
+}
+
+@keyframes dots {
+	0% {
+		opacity: 0;
+	}
+
+	5% {
+		opacity: 1;
+	}
+
+	60% {
+		text-shadow: .35em 0 0 currentColor;
+	}
+
+	100% {
+		text-shadow: .35em 0 0 currentColor, .75em 0 0 currentColor;
+	}
+}

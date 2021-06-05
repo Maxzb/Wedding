@@ -1,4 +1,10 @@
-.place {
+.place-wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.section {
 	display: flex;
 	justify-content: flex-end;
 	padding: 100px 0;
@@ -6,19 +12,23 @@
 	height: auto;
 }
 
-.place-wrap {
-	right: 0;
-	top: 110px;
+.section--pb {
+	padding-bottom: 0;
+}
+
+.section-wrap {
+	z-index: 20;
 	display: flex;
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
-	padding: 50px 0;
+	padding: 85px 0;
 	width: 85%;
 	box-shadow: -5px 5px 5px rgba(0, 0, 0, .25);
 	background-color: $light-rose;
+	transition-duration: .2s;
 }
 
-.place__info {
+.section__info {
 	display: flex;
 	flex: 0 1 50%;
 	flex-direction: column;
@@ -37,7 +47,7 @@
 		content: "";
 		position: absolute;
 		left: 50%;
-		bottom: -20px;
+		bottom: -12px;
 		width: 60px;
 		height: 3px;
 		background: linear-gradient(93.41deg, $gold 45.9%, $light-gold 97.16%);
@@ -45,21 +55,22 @@
 	}
 }
 
-.place__info-block-wrap {
+.section__info-block-wrap {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	margin-top: 45px;
 	margin-bottom: 75px;
+	padding: 0 10px;
 }
 
-.place__logo {
+.section__logo {
 	width: 100%;
 	height: auto;
 	max-width: 168px;
 }
 
-.place__addr {
+.section__addr {
 	margin: 50px 0 35px;
 	max-width: 410px;
 	font-size: 20px;
@@ -68,12 +79,12 @@
 	color: #000;
 }
 
-.place__addr--color {
+.section__addr--color {
 	font-size: inherit;
 	color: #605b56;
 }
 
-.place__link {
+.section__link {
 	position: relative;
 	display: inline-block;
 	font-size: 20px;
@@ -103,7 +114,7 @@
 	}
 }
 
-.place__img-wrap {
+.section__img-wrap {
 	display: flex;
 	flex: 0 1 50%;
 	align-items: center;
@@ -111,9 +122,56 @@
 	overflow: hidden;
 }
 
-.place__img {
+.section__img {
 	width: 100%;
 	height: auto;
 	max-width: 778px;
 	box-shadow: -5px 5px 5px rgba(0, 0, 0, .25);
+}
+
+/* КАРТА */
+.map-wrap {
+	z-index: 10;
+	margin-bottom: 100px;
+	border-bottom-left-radius: 5px;
+	padding: 0 15px 7px;
+	width: 82%;
+	box-shadow: -3px 3px 3px rgba(0, 0, 0, .25);
+	background-color: $light-rose;
+}
+
+.map-block {
+	overflow: hidden;
+	border-bottom-left-radius: 5px;
+	width: 100%;
+	max-height: 0;
+	transition-duration: .5s;
+}
+
+.map {
+	width: 100%;
+	height: 300px;
+}
+
+.map-button {
+	border-bottom-left-radius: 5px;
+	padding: 7px 0 0;
+	font-size: 16px;
+	text-align: center;
+	color: $gold;
+	transition-duration: .2s;
+	cursor: pointer;
+
+	&:hover {
+		color: $light-gold;
+		transition-duration: .2s;
+	}
+}
+
+.map-full-height {
+	max-height: 300px;
+}
+
+.map--pt {
+	padding-top: 15px;
 }

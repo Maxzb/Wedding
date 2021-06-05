@@ -1,0 +1,67 @@
+.section-wish {
+	margin-bottom: 100px;
+	padding: 22px 0;
+	width: 100%;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, .25);
+	background: linear-gradient(0deg, #f2daa6 0%, #e3ccc3 100%);
+}
+
+.wish-wrap {
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 0 15px;
+	width: 100%;
+	height: auto;
+	max-width: 925px;
+}
+
+.wish__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.wish__img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 200px;
+	background: url("../images/icons/wish-1.svg") no-repeat center / contain;
+}
+
+.wish__img-1 {
+	background: url("../images/icons/wish-1.svg") no-repeat center / contain;
+}
+
+.wish__img-2 {
+	background: url("../images/icons/wish-2.svg") no-repeat center / contain;
+}
+
+.wish__img-3 {
+	background: url("../images/icons/wish-3.svg") no-repeat center / contain;
+}
+
+.wish__pic--mr {
+	margin-right: 18px;
+}
+
+.dresscode {
+	margin-top: 10px;
+	font-size: 40px;
+	text-align: center;
+	color: #34495e;
+}
+
+.wish__text {
+	display: inline-block;
+	flex-grow: 1;
+	flex-shrink: 0;
+	margin-top: 15px;
+	font-size: 20px;
+	text-align: center;
+	color: #34495e;
+}
