@@ -1390,7 +1390,7 @@ body {
   display: none;
   overflow: auto;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: -o-linear-gradient(356.59deg, #728d5e 45.9%, #cfd68b 97.16%);
   background: linear-gradient(93.41deg, #728d5e 45.9%, #cfd68b 97.16%);
   -webkit-transition-duration: .3s;
@@ -1565,7 +1565,8 @@ body {
   color: #a18b2f;
 }
 
-.timer__data-block {
+.timer__data-block,
+.timer__data-block--end {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1620,6 +1621,20 @@ body {
 .timer__colon {
   font-size: 80px;
   color: #a18b2f;
+}
+
+.timer__data-block--end {
+  display: none;
+}
+
+.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .place-wrap {
@@ -1928,6 +1943,14 @@ body {
   background: url("../images/icons/wish-3.svg") no-repeat center/contain;
 }
 
+.wish__pic--flow {
+  width: 117px;
+}
+
+.wish__pic--bottle {
+  width: 114px;
+}
+
 .wish__pic--mr {
   margin-right: 18px;
 }
@@ -2140,6 +2163,8 @@ button.fancybox-button {
   overflow: hidden;
   padding: 100px 15px 0;
   width: 100%;
+  -webkit-box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.35), 0 5px 5px rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.35), 0 5px 5px rgba(0, 0, 0, 0.25);
   background: -webkit-gradient(linear, left top, right top, from(#728d5e), color-stop(98.1%, #cfd68b));
   background: -o-linear-gradient(left, #728d5e 0%, #cfd68b 98.1%);
   background: linear-gradient(90deg, #728d5e 0%, #cfd68b 98.1%);

@@ -18,7 +18,8 @@
 	color: $gold;
 }
 
-.timer__data-block {
+.timer__data-block,
+.timer__data-block--end {
 	display: flex;
 	justify-content: center;
 	margin-top: 15px;
@@ -56,4 +57,16 @@
 .timer__colon {
 	font-size: 80px;
 	color: $gold;
+}
+
+.timer__data-block--end {
+	display: none;
+}
+
+.visible {
+	display: flex;
+}
+
+.hidden {
+	display: none;
 }

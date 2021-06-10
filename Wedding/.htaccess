@@ -1,7 +1,0 @@
-<IfModule mod_expires.c>
-	<FilesMatch "\.(css|eot|flv|font|gif|htc|html|ico|jpeg|jpg|js|mp3|mp4|ogg|otf|pdf|png|svg|svgz|swf|ttf|webm|woff)$">
-
-		ExpiresActive On
-		ExpiresDefault "access plus 30 days"
-	</FilesMatch>
-</IfModule>

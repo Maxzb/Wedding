@@ -10594,14 +10594,18 @@ function initializeClock(id, endtime) {
 
   function updateClock() {
     var t = getTimeRemaining(endtime);
+
+    if (t.total <= 0) {
+      document.querySelector('.timer__data-block').classList.add('hidden');
+      document.querySelector('.timer__data-block--end').classList.add('visible');
+      clearInterval(timeinterval);
+      return true;
+    }
+
     daysSpan.innerHTML = t.days;
     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-    if (t.total <= 0) {
-      clearInterval(timeinterval);
-    }
   }
 
   updateClock();
@@ -10682,5 +10686,29 @@ window.addEventListener('scroll', function () {
     map_block.removeAttribute('data-src');
     console.log('YMAP LOADED');
     flag = 1;
+  }
+}); // fix HEADER
+
+var fixedMenu = document.querySelector('.header');
+var heightMenu = fixedMenu.clientHeight;
+var oneTime = 0;
+window.addEventListener('scroll', function () {
+  var scrollDistance = window.scrollY;
+
+  if (oneTime == 0) {
+    if (scrollDistance >= heightMenu) {
+      fixedMenu.style.top = '-' + heightMenu + 'px';
+      fixedMenu.style.zIndex = '50';
+
+      if (scrollDistance >= heightMenu + 50) {
+        fixedMenu.style.transition = 'all 1s ease';
+        document.querySelector('.offer').style.marginTop = heightMenu + 'px';
+        fixedMenu.style.position = 'fixed';
+        fixedMenu.style.top = '0';
+        document.querySelector('.header__wrapper').style.marginTop = '0';
+        document.querySelector('.mob-menu').style.top = heightMenu + 'px';
+        oneTime = 1;
+      }
+    }
   }
 });
